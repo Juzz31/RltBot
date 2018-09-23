@@ -87,4 +87,4 @@ bot.on("guildMemberRemove", member => {
 
 
 
-bot.login(tokenfile.token);
+bot.login(process.env.TOKEN);
