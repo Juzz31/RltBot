@@ -3,8 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Vous n'avez pas la permission pour faire cela...");
-  if(!args[0]) return message.channel.send("non, il n'y a pas d'utilisateur a ban !");
-  if(!args[1]) return message.channel.send("Vous devez indiquer une raison !");
+  if(!args[0]) return message.channel.send("non !");
   message.channel.bulkDelete(args[0]).then(() => {
   message.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
 });
