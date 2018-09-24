@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
     .setColor("#e56b00")
-    .addField("Utilisateur Kick", `${kUser} with ID ${kUser.id}`)
-    .addField("Kick Par", `<@${message.author.id}> with ID ${message.author.id}`)
+    .addField("Utilisateur Kick", `${kUser} avec comme ID ${kUser.id}`)
+    .addField("Kick Par", `<@${message.author.id}> avec comme ID ${message.author.id}`)
     .addField("Kick Dans", message.channel)
     .addField("Heure", message.createdAt)
     .addField("Raison", kReason);
