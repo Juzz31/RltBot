@@ -65,9 +65,13 @@ bot.on("message", async message => {
 
 bot.on("guildMemberAdd", member => {
 
+  let role = member.guild.roles.find("name", "❤ | Fan ƦԼƬ");
+  member.addRole(role);
+
   if(member.guild.id !== serverStats.guildID) return;
 
   bot.channels.get(serverStats.TotalUsersID).setName(`Membres Totaux : ${member.guild.memberCount}`);
+
 
 
 });
