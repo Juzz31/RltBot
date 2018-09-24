@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) return message.channel.send("Je ne trouve pas cet utilisateur...");
+    if(!args[1]) return message.channel.send("Vous devez indiquer une raison !");
     let bReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Vous n'avez pas la permission");
     if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("Cette personne ne peut être bannie");
