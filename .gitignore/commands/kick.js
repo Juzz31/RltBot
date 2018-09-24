@@ -4,8 +4,8 @@ module.exports.run = async (bot, message, args) => {
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!kUser) return message.channel.send("Je ne trouves pas cet utilisateur");
     let kReason = args.join(" ").slice(22);
-    if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("Vous n'avez pas la permission");
-    if(kUser.hasPermission("MANAGE_MEMBERS")) return message.channel.send("Cette personne ne peut être bannie");
+    if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Vous n'avez pas la permission");
+    if(kUser.hasPermission("KICK_MEMBERS")) return message.channel.send("Cette personne ne peut être bannie");
 
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
