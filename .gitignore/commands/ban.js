@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     if(!bUser) return message.channel.send("Je ne trouve pas cet utilisateur...");
     let bReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("Vous n'avez pas la permission");
-    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Cette personne ne peut être bannie");
+    if(bUser.hasPermission("MANAGE_MEMBERS")) return message.channel.send("Cette personne ne peut être bannie");
 
     let banEmbed = new Discord.RichEmbed()
     .setDescription("~Ban~")
