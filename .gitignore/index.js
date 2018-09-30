@@ -66,7 +66,10 @@ bot.on("message", async message => {
 bot.on("guildMemberAdd", member => {
 
   let role = member.guild.roles.find("name", "❤ | Fan ƦԼƬ");
+  let role2 = member.guild.roles.find("name", "➖➖ Hors ƦԼƬ ➖➖");
   member.addRole(role);
+  member.addRole(role2);
+
 
   if(member.guild.id !== serverStats.guildID) return;
 
