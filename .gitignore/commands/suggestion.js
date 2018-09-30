@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       return;
     }
 
-    message.channel.send("Merci pour votre suggestion d'amélioration, nous la traitons au plus vite");
+    message.channel.send("Merci pour votre suggestion d'amélioration du bot, nous la traitons au plus vite");
 
   const candidMessage = args.join(" ");
 
