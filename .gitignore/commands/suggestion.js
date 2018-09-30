@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
   const mdembed = new Discord.RichEmbed()
   .setTitle("~Suggestion~")
   .addField("auteur :", message.author.tag)
-  .addField('Candidature :', candidMessage);
+  .addField('Suggestion :', candidMessage);
 
   message.guild.channels.find('name', "💥-suggestions-bot").send(mdembed)
   .then((newMessage) => {
