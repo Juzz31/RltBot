@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
   const candidMessage = args.join(" ");
 
   const mdembed = new Discord.RichEmbed()
-  .setTitle("~~Suggestion~~")
+  .setTitle("~Suggestion~")
   .addField("auteur :", message.author.tag)
   .addField('Candidature :', candidMessage);
 
